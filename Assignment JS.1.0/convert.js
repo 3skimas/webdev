@@ -19,5 +19,3 @@ const c2f = function (){
     s += '</table>';
     return s;
 }
-
-window.addEventListener('load', c2f);
