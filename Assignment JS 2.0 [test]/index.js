@@ -46,8 +46,8 @@ const record = function (btn) {
     [b]: (a[b] || 0) + 1
     }), {})
 
-    const duplicates = dict =>
-    Object.keys(dict).filter((a) => dict[a] > 1)
+    /* const duplicates = dict =>
+    Object.keys(dict).filter((a) => dict[a] > 1) */
 
     console.log('------------');
 
