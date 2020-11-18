@@ -22,12 +22,12 @@ const rollm = function () {
 }
 
 const numbers = function (){
-    let number1 = document.getElementById('sum1');
-    let number2 = document.getElementById('sum2');
-    let number3 = document.getElementById('sum3');
-    let number4 = document.getElementById('sum4');
-    let number5 = document.getElementById('sum5');
-    let number6 = document.getElementById('sum6');
+    let number1 = document.getElementById('p1');
+    let number2 = document.getElementById('p2');
+    let number3 = document.getElementById('p3');
+    let number4 = document.getElementById('p4');
+    let number5 = document.getElementById('p5');
+    let number6 = document.getElementById('p6');
     let total = document.getElementById('sum');
     let sum = dice.reduce(function(a, b){
         return a + b;
@@ -49,6 +49,7 @@ const numbers = function (){
     console.log(count(dice)[6]);
 
     console.log('------------');
+
 
     if(count(dice)[1] != undefined){
         let ones = count(dice)[1];
@@ -80,6 +81,7 @@ const numbers = function (){
         number6.innerHTML = six;
     }else
         number6.innerHTML = '0';
+
 }
 
 const record = function (btn) {

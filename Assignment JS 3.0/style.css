@@ -65,10 +65,13 @@ body {
     height: 50px;
     margin: 10px;
     width: 50px;
-    
+
     display: grid;
     align-items: center;
     justify-content: center;
+}
+table, th, td {
+    border: 1px solid black;
 }
 hr {
     clear: both;
