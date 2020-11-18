@@ -14,13 +14,6 @@ const rollm = function () {
             dice[i] = r;                                // record the play?
         }
     }
-    console.log(dice);
-    console.log(frozen);
-}
-
-const record = function (btn) {
-    btn.removeEventListener('click', play);
-    btn.style.backgroundColor = 'red';
     let number1 = document.getElementById('sum1');
     let number2 = document.getElementById('sum2');
     let number3 = document.getElementById('sum3');
@@ -28,14 +21,6 @@ const record = function (btn) {
     let number5 = document.getElementById('sum5');
     let number6 = document.getElementById('sum6');
     let total = document.getElementById('sum')
-
-    console.log('kilroy was here, scoring');
-    setTimeout( function () {
-        btn.addEventListener('click', play);
-        btn.style.backgroundColor = 'white';
-        }, 1000);
-    // create a function here that scores 1-6'es
-
     let sum = dice.reduce(function(a, b){
         return a + b;
     }, 0);
@@ -90,6 +75,22 @@ const record = function (btn) {
         number6.innerHTML = six;
     }else
         number6.innerHTML = '0';
+    
+    console.log(dice);
+    console.log(frozen);
+}
+
+const record = function (btn) {
+    btn.removeEventListener('click', play);
+    btn.style.backgroundColor = 'red';
+    
+    console.log('kilroy was here, scoring');
+    setTimeout( function () {
+        btn.addEventListener('click', play);
+        btn.style.backgroundColor = 'white';
+        }, 1000);
+    // create a function here that scores 1-6'es
+
     
 };
 
