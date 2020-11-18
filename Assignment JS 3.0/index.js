@@ -14,13 +14,21 @@ const rollm = function () {
             dice[i] = r;                                // record the play?
         }
     }
+    
+    numbers();
+    
+    console.log(dice);
+    console.log(frozen);
+}
+
+const numbers = function (){
     let number1 = document.getElementById('sum1');
     let number2 = document.getElementById('sum2');
     let number3 = document.getElementById('sum3');
     let number4 = document.getElementById('sum4');
     let number5 = document.getElementById('sum5');
     let number6 = document.getElementById('sum6');
-    let total = document.getElementById('sum')
+    let total = document.getElementById('sum');
     let sum = dice.reduce(function(a, b){
         return a + b;
     }, 0);
@@ -30,9 +38,6 @@ const rollm = function () {
     dice.reduce((a, b) => ({ ...a,
     [b]: (a[b] || 0) + 1
     }), {})
-
-    /* const duplicates = dict =>
-    Object.keys(dict).filter((a) => dict[a] > 1) */
 
     console.log('------------');
 
@@ -75,9 +80,6 @@ const rollm = function () {
         number6.innerHTML = six;
     }else
         number6.innerHTML = '0';
-    
-    console.log(dice);
-    console.log(frozen);
 }
 
 const record = function (btn) {
