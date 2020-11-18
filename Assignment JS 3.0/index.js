@@ -82,6 +82,7 @@ const numbers = function (){
     }else
         number6.innerHTML = '0';
 
+    console.log(count(dice)); // looking for pairs
 }
 
 const record = function (btn) {
