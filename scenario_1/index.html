@@ -32,17 +32,23 @@
             </section>
 
             <section class="bookingas">
+                <div>
                 <form>
                     <h1>Make sure to fill information bellow</h1>
                     <input type="text" placeholder="Name" id="name">
                     <input type="text" placeholder="Surename" id="surename">
-                    <input type="datetime-local" name="datetime" id="datetime">
-                    <input type="number" id="choice" value="2">
-
-                    <div style="text-align: center;">
-                        <button class="btn-1">Book a table!</button>
-                    </div>
+                    <input type="date" min="2020-11-01" max="2020-11-30" id="datetime">
                 </form>
+
+                <section style="display: flex; justify-content: center; flex-direction: column;">
+                    <div style="text-align: center; display: flex; justify-content: center;">
+                        <button class="btn-1" id="btn">write data</button>
+                        <button class="btn-1" id="btn" onclick="getdata();">get</button>
+                    </div>
+                </section >
+                    <div style="display: flex; justify-content: center;">
+                            <span style="text-align: center; color: #fcfcfc;" id="result"></span>
+                    </div>
             </section>
 
             
