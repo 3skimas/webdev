@@ -8,23 +8,25 @@ let storedSettings;
 const writedata = function () {
 
     let name = document.getElementById('name').value;
-    let surename = document.getElementById('surename').value;
+    let surname = document.getElementById('surname').value;
     let date = document.getElementById('datetime').value;
 
     const reservation = {
             id: counter,
             name: name,
-            surename: surename,
+            surname: surname,
             date: date
     }
     localStorage.setItem('reservation' + counter, JSON.stringify(reservation));
+
+    alert(reservation.name + " thanks for the reservation! We will be waiting for you on " + reservation.date);
 }
 
 const getdata = function () {
     for(let i = 0; i < localStorage.length; i++){
         storedSettings = JSON.parse(localStorage.getItem('reservation' + i));
     }
-    document.getElementById('result').innerHTML = 'First Name ' + storedSettings.id;
+    document.getElementById('result').innerHTML = 'First Name ' + storedSettings.name;
 
 }
 
